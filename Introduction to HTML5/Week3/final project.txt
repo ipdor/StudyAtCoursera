@@ -1,0 +1,46 @@
+The heading is: Colleen van Lent (change to your name)
+The text for the four links is: One, Two, Three, and Your choice (change to text of your choice)
+The next section starts with a subheading of "Favorite Foods" followed by an unordered list of your four favorite foods. Apples (change to food of your choice), Pizza (change to food of your choice), Crab (change to food of your choice), Chocolate Cake (change to food of your choice)
+The next section starts with a subheading of "Achievements" followed by three progress bars. The text to use is:
+Progress in this course (100%),
+Progress in the Specialization capstone (20%),
+and Progress in life goals (67%) (change to goal and completion level of your choice)
+The next section starts with a subheading of "More About Me" that contains a details tag with a summary of your childhood. Supply a short (real or fake) description of your childhood. Next include a link to the image at http://www.intro-webdesign.com/images/newlogo.png and the text "This page was created by insert your name and Colleen van Lent. To learn more about web design, visit Intro to Web Design." Make sure to use an ampersand for the and The text "Intro to Web Design" should link to http://www.intro-webdesign.com. 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project Description</title>
+</head>
+<body>
+The heading is:
+<em>Colleen van Lent</em> (change to your name)
+
+<section>
+The text for the four links is: One, Two, Three, and 
+<em>Your choice</em> (change to text of your choice)
+</section>
+<section>
+The next section starts with a subheading of "Favorite Foods" followed by an unordered list of your four favorite foods.
+<em>Apples</em> (change to food of your choice), 
+<em>Pizza</em> (change to food of your choice), 
+<em>Crab</em> (change to food of your choice), 
+<em>Chocolate Cake</em> (change to food of your choice)
+</section>
+
+<section>
+The next section starts with a subheading of "Achievements" followed by three progress bars.  The text to use is:<br/>
+Progress in this course (100%), <br/>
+Progress in the Specialization capstone (20%), <br/> and 
+<em>Progress in life goals (67%)</em> (change to goal and completion level of your choice)
+</section>
+<section>
+The next section starts with a subheading of "More About Me" that contains a details tag with a summary of your childhood. Supply a short (real or fake) description of your childhood.
+
+Next include a link to the image at  http://www.intro-webdesign.com/images/newlogo.png and the text "This page was created by <em>insert your name</em> and Colleen van Lent.  To learn more about web design, visit Intro to Web Design."  Make sure to use an ampersand for the <em>and</em> The text <em>"Intro to Web Design"</em> should link to  http://www.intro-webdesign.com.
+</section>
+</body>
+</html>

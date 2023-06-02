@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tags</title>
+    <style>
+        table{
+            border-style: solid;
+            border-width: 3px;
+            border-style: yellow;
+        }
+        tr,
+        td{
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <!--ordered list-->
+    <ol start="0">
+        <li>Head north on N Halsted St</li>
+        <li value="3">Turn right on W Diversey Pkwy</li>
+        <li>Turn left on N Orchard St</li>
+    </ol>
+    <br>
+    <!--description list-->
+    <dl>
+        <dt>study</dt>
+        <dd>The devotion of...</dd>
+        <dt>design</dt>
+        <dd>A plan or drawing...</dd>
+        <dd>Purpose, planning, or ...</dd>
+        <dt>business</dt>
+        <dt>work</dt>
+        <dd>A person's regular occupation ...</dd>
+        <dd>It need ...</dd>
+    </dl>
+    <br>
+    <!--nested list-->
+    <ol>
+        <li>item1</li>
+        <li>item2</li>
+        <li>
+            <ul>
+                <li>item3- embed item1. Pay attention, the markers of unordered list is changed</li>
+                <li>item3- embed item2</li>
+                <li>item3- embed item3</li>
+                <li>
+                    <dl>
+                        <dt>unorderd list</dt>
+                        <dd>The most simple one</dd>
+                        <dt>ordered list</dt>
+                        <dd>Slightly complicated one</dd>
+                        <dt>nested list</dt>
+                        <dd>The &lt;ul&gt; and &lt;ol&gt; elements may contain only &lt;li&gt; elements. The &lt;li&gt; element may contain any normal element as desired; however, the &lt;li&gt; element has to be a direct child of either a &lt;ul&gt; or &lt;ol&gt; element.</dd>
+                    </dl>
+                </li>
+            </ul>
+        </li>
+        <li>item4</li>
+    </ol>
+    <br>
+    <!--image-->
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/dog.jpg" title="A dog picture" alt="A black, brown, and white dog wearing a kerchief">
+    <a href='https://www.wpkube.com/?page_id=30250'><img src='https://www.wpkube.com/wp-content/uploads/2017/09/html-chatsheet.jpg' alt='The Ultimate HTML 5 Cheat Sheet [Infographic]' width='600px' border='0' /></a>
+    
+    <!--table-->
+    <table>
+        <caption>Purchase List</caption>
+        <thead>
+            <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Availability</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td headers="Item">Introducing HTML5 by Bruce Lawson</td>
+                <td>In stock</td>
+                <td>1</td>
+                <td>$300.2</td>
+            </tr>
+            <tr>
+                <td>A Project Guide to UX Design by Russ Unger & Carolyn Chandler 	</td>
+                <td>In stock</td>
+                <td>2</td>
+                <td>$52.26</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td></td>
+                <td></td>
+                <td>$135.36</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td></td>
+                <td></td>
+                <td>$9.36</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
