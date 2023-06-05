@@ -1,0 +1,33 @@
+Code:
+
+All of the code I cover is available from a CodePen repository.  I hope you can play with the code to test the different concepts we will cover.  Here is a link to the CodePen repository for the Week One code. 
+
+http://codepen.io/collection/noEQed/
+
+Here is a list of the lectures this week that use CodePen, and the name of each file that they use:
+
+01-02 Cascading Style Sheet: 
+
+    styleAttribute.html
+
+    Presendence 
+
+    externalstyle 
+
+     internalStyle.html
+
+01-04 Styling Your Text: 
+
+    fonts
+
+01-05 Code Together:
+
+    Code Together 1 - No CS
+
+    Code Together 1 - With CSS
+
+01-06 Display and Visbility - Part 1: 
+
+    Display Example 1 
+
+    Display Example 2
