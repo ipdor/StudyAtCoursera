@@ -1,0 +1,32 @@
+body{
+    background-color: #fff1a2;
+}
+
+@font-face {
+    font-family: mySpecialFont;
+    src: url('./Pacifico.ttf');
+}
+
+h1,
+h2
+{
+    font-family: mySpecialFont;
+}
+
+h1,
+nav{
+    text-align: center;
+}
+
+h2{
+    color: #ff0000;
+    background-color: #6767ff
+}
+
+p{
+    line-height: 120%;
+    font-family: Arial, "Times New Roman", serif;
+}
+li{
+    font-style: oblique;
+}

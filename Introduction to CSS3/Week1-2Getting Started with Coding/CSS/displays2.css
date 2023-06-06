@@ -1,0 +1,14 @@
+html{
+    display: table;
+}
+
+.row1{
+    width: 30%;
+    background-color: #00ffff;
+    display: table-cell;
+}
+
+.row2{
+    background-color:bisque;
+    display: table;
+}
