@@ -1,0 +1,46 @@
+img{
+    display: none;
+    /* resize pictures and center them
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    */
+}
+
+header{
+    background-color: #b2b2b2;
+}
+
+h1{
+    color: #ffffff;
+    text-align: center;
+}
+
+h2{
+    color: #000080;
+}
+
+h1,
+h2{
+    text-transform: uppercase;
+}
+
+section{
+    background-color: #7f7f7f;
+}
+
+nav{
+    /*Caution!!  Because it is difficult to see when the links are centered, 
+    I removed this requirement from the assignment.  
+    You do NOT need to center the links.  As soon as I can, I will update this video, 
+    but I didn't want you to worry while you are doing the assignment.*/
+    text-align: center;
+}
+
+a{
+    background-color: #c5c5c5;
+    color: #010101;
+}
