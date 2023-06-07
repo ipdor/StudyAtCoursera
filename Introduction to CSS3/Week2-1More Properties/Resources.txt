@@ -1,0 +1,36 @@
+Resources
+Code:
+
+Here is a link to the CodePen repository for the Week Two code.  You can play with the code to test the different concepts.  
+
+http://codepen.io/collection/DVYVpB/
+
+Here is a list of the lectures this week that use CodePen, and the name of each file that they use:
+
+02-01 Box Mode:
+
+    Box Display
+
+02-03 Styling Links and Lists:
+
+    Links
+
+    Lists
+
+02-04 Advanced Selectors:
+
+    Advanced Selectors
+
+    Advanced Selectors 2 - Attribute Selectors
+
+02-05 Browser Capabilities:
+
+    Consistent Browser Style with default
+
+    Consistent Browser Style with prefixes
+
+02-06 Coding Together:
+
+    Coding together 3 with CSS - Classes
+
+    Coding together 3 with No CSS - Classes
