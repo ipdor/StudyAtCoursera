@@ -90,6 +90,13 @@ h1{
 * **Use pixel**
 * Use %
 
+### text-transform
+
+text-transform: none|capitalize|uppercase|lowercase|initial|inherit;
+
+
+
+
 #### custome fonts
 
 ```CSS
