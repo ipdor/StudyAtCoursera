@@ -1,4 +1,7 @@
-/* Here, we use the css file "together1.css" from Week1 "01-05 Code Together". */ 
+/*
+ This file is for index.html
+ Here, we use the css file "together1.css" from Week1 "01-05 Code Together". 
+*/ 
 
 /* this should be for body tag
 h1{
@@ -8,13 +11,14 @@ h1{
 */
 
 body{
-    background-color: #b3b3b3; 
+    background: #b3b3b3 url("https://th.bing.com/th/id/R.f3d22d1f3f70aa21df250f530429f7d6?rik=Zapqksp1DxahJQ&pid=ImgRaw&r=0") no-repeat fixed ;
+    background-size: 100% 100%;
     font-size: 150%;
     margin: 4%;
 }
 
 header{
-    background-color: #666666;
+    background-color: rgba(0, 0, 0, 0.4);
     text-align: center;
     padding: 15px;
 }
@@ -43,7 +47,7 @@ summary{
 }
 
 footer{
-    background-color: #666666;
+    background-color: rgba(0, 0, 0, 0.4);
     clear:both;
     padding: 15px;
 }
@@ -63,3 +67,15 @@ img{
 p{
     margin: 0px;
 }
+
+a{
+	background-color:#000000;
+	color: #ffffff;
+}
+
+a:hover,
+a:focus{
+	background-color:#6b5555;
+	color:#000000;
+}
+
