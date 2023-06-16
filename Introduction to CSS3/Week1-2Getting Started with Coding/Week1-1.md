@@ -97,7 +97,7 @@ text-transform: none|capitalize|uppercase|lowercase|initial|inherit;
 
 
 
-#### custome fonts
+#### custom fonts
 
 ```CSS
 @font-face {
@@ -218,7 +218,6 @@ span{
 * Display is just one tool for positioning our elements on the page
 * Early design will make the coding easier
 * Utilize tools to see the different options
-
 
 
 

@@ -109,8 +109,13 @@ inline
 
 ###¡¡10.A block element takes up the full width of it's parent, even if the content is smaller than the parent.  So two block elements at the same will not be side-by-side.
 
-
 False
+
+### 10.A block element takes up the full width of it's parent, even if the content is smaller than the parent.  So two block elements at the same will not be side-by-side.
+
+True
+
+/*Block elements take up the full width of the browser, even if the content is small. */
 
 ### 11.Inline elements take up the full width of the browser, even if the content is smaller than the browser size.
 
