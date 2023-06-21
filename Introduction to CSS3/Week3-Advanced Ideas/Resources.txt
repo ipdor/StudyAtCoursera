@@ -1,0 +1,18 @@
+Code:
+Here is a link to the CodePen repository for the Week Three code. You can play with the code to test the different concepts.
+
+http://codepen.io/collection/XGowWM/
+
+Here is a list of the lectures this week that use CodePen, and the name of each file that they use:
+
+03-02 Transitions:
+
+Transitions - Using psuedo classes
+
+03-04 Code Together - Transitions:
+
+Animate - Using Transform
+
+03-05 Positioning:
+
+Positioning

@@ -1,46 +1,68 @@
-img{
-    display: none;
-    /* resize pictures and center them
-    width: 60%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    */
+body {
+    padding: 10px;
+    margin: 10px;
+    font-size: 110%;
 }
 
 header{
-    background-color: #b2b2b2;
+    background: #aaaaaa url(../images/flywheel.jpg)  no-repeat ;
+    background-size: 100%;
+    padding: 20px 0px 40px  0px;
 }
 
 h1{
     color: #ffffff;
     text-align: center;
-}
-
-h2{
-    color: #000080;
-}
-
-h1,
-h2{
+    font-size: 120%;
     text-transform: uppercase;
 }
 
-section{
-    background-color: #7f7f7f;
+h2{
+    color:  #666503;
 }
 
 nav{
-    /*Caution!!  Because it is difficult to see when the links are centered, 
-    I removed this requirement from the assignment.  
-    You do NOT need to center the links.  As soon as I can, I will update this video, 
-    but I didn't want you to worry while you are doing the assignment.*/
     text-align: center;
 }
 
-a{
-    background-color: #c5c5c5;
+nav>a{
+    background: rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    /*opacity: 35%;   Opacity works but will also apply to text, it's not the best choice here, use rgba instead */
     color: #010101;
+    width: 10%;
+    height: 5%;
+    text-decoration: none;
+    padding: 10px;
+    margin: auto 5%;
+    border-radius: 5px;
+}
+
+.active{
+    opacity: 90%;
+    background-color: #ffffff;
+}
+
+.left{
+    display: inline-block;
+    float: left; 
+    background-color: #777613;
+    width: 20%;
+    height: 500px;
+    padding: 10px;
+}
+
+img{
+    /*display: none; */
+    width: 70%;
+    display: block;
+    margin: 20px auto;
+    border: #000000 solid 2px;
+}
+
+.right{
+    display: inline-block;
+    float: left;
+    width: 75%;
+    margin:0px 10px;
 }

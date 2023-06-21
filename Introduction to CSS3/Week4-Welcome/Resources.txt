@@ -1,0 +1,25 @@
+Code:
+Here is a link to the CodePen repository for the Week Four code. You can play with the code to test the different concepts.
+
+http://codepen.io/collection/AOLapY/
+
+Here is a list of the lectures this week that use CodePen, and the name of each file that they use:
+
+04-01 Styling Tables:
+
+Table Example
+
+04-02 Creating Navigation Menus:
+
+Vertical Navigation
+
+04-04 Creating Navigation Menus 2:
+
+Horizontal Navigation
+
+04-05 Creating Navigation Menus 3:
+
+Drop down Navigation menu
+
+
+Someone also asked for a link to one of the images I use in a video.  It is a lightning bolt.
