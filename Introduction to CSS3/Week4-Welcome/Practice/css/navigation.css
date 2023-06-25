@@ -1,0 +1,37 @@
+/*
+https://codepen.io/ColleenEMc/pen/qOVpYg
+*/
+
+body{
+	background-color: #F2F2F2;
+	margin: 1%;
+	padding:1%;
+}
+
+nav{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 20%;
+    height:100vh;
+    /*background: #00aaaa;*/
+    background-color:#486B02;
+    overflow: auto;
+}
+
+section{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 78%;
+    height: 100vh;
+    background-color:aqua;
+    overflow: auto;
+}
+
+nav > a{
+    display: block;
+    margin: 15% 17%;
+    color: #F2F2F2;
+    background: url("../images/lightning.png") no-repeat left;
+    padding-left: 20%;
+    text-decoration: none;
+}

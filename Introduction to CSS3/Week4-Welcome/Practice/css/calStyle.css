@@ -1,0 +1,75 @@
+/*
+参考老师代码：
+https://codepen.io/ColleenEMc/pen/pjdpVW
+*/
+
+table.cal{
+	border:1px solid #000000;
+	padding:0;
+	border-spacing: 0px;
+	border-radius: 0 0 25px 25px;
+}
+
+td{
+	height:75px;
+	width:75px;
+	vertical-align:top;
+	/* border: #000000 solid 1px; */
+	margin: 0;
+	padding:0;
+}
+tr{
+	padding:0;
+	margin:0;
+}
+
+
+caption{
+	background:#ee9c6c;
+	border:2px solid #000000;
+	border-radius:50px 50px 0px 0px ;
+}
+
+tr:nth-child(even){
+	background:#f58994;
+}
+tr:nth-child(odd){
+	background:#b0beaf;
+}
+
+th{
+	background:#b3ddd1;
+}
+
+.old{
+	color: rgba(0,0,0,0.5);
+	/*opacity:0.5;*/
+}
+
+.holiday,.old{
+	background:#d1dce2;
+}
+
+td>span{
+	visibility:hidden;
+}
+
+td:hover>span{
+	visibility:visible;
+}
+
+
+tr:last-child{
+	-webkit-border-radius:  0 0 25px 25px ;
+	-ms-border-radius:  0 0 25px 25px ;
+	border-radius: 0 0 25px 25px ;
+}
+
+
+tr:last-child>td:first-child{
+	border-radius: 0 0 0  25px ;	
+}
+
+tr:last-child>td:last-child{
+	border-radius: 0 0 25px 0;	
+}
