@@ -1,0 +1,69 @@
+/*
+
+https://codepen.io/ColleenEMc/pen/QjOaxv
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+}
+
+nav{
+    background:#000;
+    display:block;
+}
+ul{
+    margin:0px;
+    padding-inline-start: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding: 0px;
+}
+nav>ul>li{
+    box-sizing:border-box;
+    display:inline-block;
+    height:50px;
+    padding: 0px;
+    margin: 0px -3px;
+    /*     background:#0f0; */
+    width:25%;
+    border-left: #aa0 2px solid;
+    border-right: #aa0 2px solid;
+    transition:background-color 0.5s linear 0.01s;
+}
+
+nav>ul>li:first-child{
+    border-left:none;
+}
+
+nav>ul>li:last-child{
+    border-right:none;
+}
+
+li>a{
+    box-sizing:border-box;
+    display:inline-block;
+    text-decoration: none;
+    padding: 11px 0%;
+    width:100%;
+    height:100%;
+    text-align:center;
+}
+
+li:hover{
+    background-color:#f00;
+    
+}
+    
+nav>ul>li>ul{
+    position: absolute;
+    display:none;
+    background-color: #ccc;
+}
+
+/*可以显示，但问题是会把nav拉长，然后显示，而不是浮在section上面*/
+nav>ul>li:hover>ul{
+
+    display:block;
+}

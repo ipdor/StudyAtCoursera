@@ -1,0 +1,41 @@
+/*
+
+https://codepen.io/ColleenEMc/pen/dYZJeE
+*/
+body{
+	background-color: #F2F2F2;
+	margin: 1%;
+	padding:1%;
+}
+
+nav{
+	box-sizing:border-box;
+	border:1px #000000 solid;
+	color:#06425c;
+	overflow:auto;
+	padding-left:20px;
+}
+
+nav>a{
+	box-sizeing: border-box;
+	display:inline-block;
+	height:40px;
+	background:#486B02; 
+/* 	margin:0 3%; */
+	margin: 1% 5% 1% 0;
+/* 	padding:3%; */
+	padding: 1% 5%;
+	text-decoration:none;
+	color:#fff;
+	border-radius:30px
+}
+
+
+.current{
+	background:#aa0000;
+}
+
+a:hover{
+	color:#000;
+	border-radius:0%
+}
