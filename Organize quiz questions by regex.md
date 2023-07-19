@@ -1,9 +1,16 @@
 using notepad++
 
-# Question number
+# 1. "Question"
+
+delete all ```Question [0-9]\r\n```   
+
+
+# 2. Question number
 
 replace ```^([0-9]+)\.\r\n\r\n```   
 with ```\r\n# \1\. ```
+
+
 
 
 from :
@@ -34,7 +41,11 @@ False
 ```
 
 
-# Point
-replace ```1 point``` with ```^[0-9]+ point\r\n```
+# 3. Score "Point"
+replace ```[0-9] point\r\n``` with ```^[0-9]+ point\r\n```
 
+
+# 4. Line number 
+
+delete all ```^[0-9]{1}\r\n```
 
