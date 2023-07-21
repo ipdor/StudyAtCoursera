@@ -1,0 +1,19 @@
+Link to All of the Code for Week Three
+
+
+The following is a link to all of the code for Week Three. The individual files are linked within the videos but the weekly collections may include additional code that you are free to use.
+
+http://codepen.io/collection/noEJaj/
+
+Even if you use CodePen, I encourage you to practice writing the code on your own. For now, I put complete examples in CodePen, but as time goes on I will remove some of the commands to link the code together. You will need to work on that part on your own..
+
+----
+
+A JavaScript Cheat Sheet
+
+
+I thought about putting this next link in the optional resources section, but it is something I really want people to know about.   This "Cheat Sheet" covers the major essentials of the JavaScript language.  Some of it we have covered, and some we will cover in the next two weeks.  And then there is a chunk we will never get to.
+
+http://www.cheat-sheets.org/saved-copy/jsquick.pdf
+
+So why do I want to share this with you?  As you learn to program it is important to step back every once and awhile and review what you have learned AND what you still have left to learn.  It helps a lot of people to look ahead and start to see that they need to master the small stuff before they can tackle the larger concepts.
