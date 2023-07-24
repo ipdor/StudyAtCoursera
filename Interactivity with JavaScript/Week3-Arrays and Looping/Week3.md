@@ -26,6 +26,21 @@ var info = ["Colleen", "1715", "Walnut", 44004];
 ```
 
 
+## JavaScript Iteration
+
+```js
+var sum = 0;
+for (index = 0; index < grades.length; index++>){
+    sum += grades[index];
+}
+document.write(sum/grades.length);
+```
+
+## Flow Of Control
+
+### if
+
+### else
 
 
 

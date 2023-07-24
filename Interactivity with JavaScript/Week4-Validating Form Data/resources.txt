@@ -1,0 +1,7 @@
+Link to All of the Code for Week Four
+
+The following is a link to all of the code for Week Four. The individual files are linked within the videos but the weekly collections may include additional code that you are free to use.
+
+http://codepen.io/collection/DYydJE/
+
+Even if you use CodePen, I encourage you to practice writing the code on your own. For now, I put complete examples in CodePen, but as time goes on I will remove some of the commands to link the code together. You will need to work on that part on your own..

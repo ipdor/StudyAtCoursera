@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+    <link rel="stylesheet" href="css/form.css">
+    <script src="js/validate.js"></script>
+</head>
+<body onload="return hide_prompt()">
+
+    <form id="basic_form">
+        <label for="name">Name:</label>
+        <input type="text" id="id" value="name" name="name"> 
+        <br/>
+        <label>Email: <input type="email" name="email" id="email"></label>
+        <br/>
+        <label for="birth">Birth:</label>
+        <input type="date" id="birth" value="birth">
+        <br/>
+        <input type="submit" value="Click Here!">
+    </form>
+
+
+    <form id="validate_zipcode">
+        <label for="zipcode">Zip code:<input name="zipcode" type="text" pattern="[0-9]{5}" placeholder="5 digits" required></label>
+        <br/>
+        <input type="submit">
+    </form>
+
+    <form id="validate_addresses_same">
+        <label for="input_email">Email address: <input type="email" name="input_email" id="input_email" required></label>
+        <br/>
+        <label for="repeat_email">Repeat email address: <input type="email" name="repeat_email" id="repeat_email" oninput="check_email_same()" required></label>
+        <br/>
+        <label class="prompt"></label>
+        <br/ class="prompt">
+        <input type="submit" onclick="return check_email_same()"> <!--Dont't forget return at onclick!-->
+    </form>
+</body>
+</html> 
