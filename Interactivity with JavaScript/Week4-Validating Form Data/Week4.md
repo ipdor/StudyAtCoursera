@@ -1,5 +1,9 @@
 ## Simple Forms
 
+> [form表单的GET和POST请求](https://www.jianshu.com/p/875e7f42081e)
+> 
+> [发送表单数据](https://developer.mozilla.org/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
+
 Using ```<form>```, ```<label>``` and ```<input>``` to create forms.
 
 ```html
@@ -32,7 +36,7 @@ Using ```<form>```, ```<label>``` and ```<input>``` to create forms.
 
 ### Attributes:
 * type
-* name ([These days it serves no real purpose](https://stackoverflow.com/questions/8946320/whats-the-point-of-html-forms-name-attribute#8946369))
+* name (display in URL: ```?name1=value1&name2=value2```)
 * id
 * value(For button, it is text; For textfield, it is a default valut)
 * placeholder (Provides a suggestion)
@@ -158,5 +162,68 @@ function hide_prompt(){
         prompt[i].style.display="none"; //display:none - 不占空间; visibility:hidden - 占用空间
     }
     return true;
+}
+```
+
+
+## Checkboxes and Radio Buttons
+
+### Checkboxes
+Options share a single name.
+
+```html
+<form>
+  Favorite Foods<br/>
+  <label><input type="checkbox" name="food" value="Pizza">Pizza</label><br/>
+
+  <label><input type="checkbox" name="food" value="Chips">Chips</label><br/>
+
+  <label><input type="checkbox" name="food" value="Kale">Kale</label><br/>
+
+  <input type="submit">
+</form>
+```
+
+### Radio Buttons
+Radio buttons only allow you to select one option per group.
+
+```html
+<form>
+  Favorite Foods<br/>
+  <label><input type="radio" name="gender" value="Male">Male</label><br/>
+
+  <label><input type="radio" name="gender" value="Female">Female</label><br/>
+  
+  <input type="submit">
+</form>
+```
+
+
+### JavaScript
+
+The boolean expression is usually on the ```checked``` attribute.
+
+Event ```onchange``` call a js function, and it checks the ```checked``` attribute of a checkbox.
+
+```html
+<!--more-->
+<input id="yesNick" name="yesNick" type="checkbox" value="yes" onchange= "nicknameFunction()"/>
+<!--more-->
+```
+
+
+
+
+```js
+function nicknameFunction(){
+    var checkbox_nickname = document.getElementById("yesNick");
+    if (checkbox_nickname.checked == true){
+        document.getElementById("nick").style.display="inline";
+        document.getElementById("nickname").setAttribute("required","true");
+    }
+    else{
+        document.getElementById("nick").style.display="none";
+        document.getElementById("nickname").removeAttribute("required");
+    }
 }
 ```

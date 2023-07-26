@@ -2,7 +2,7 @@ using notepad++
 
 # 1. "Question"
 
-delete all ```Question [0-9]\r\n```   
+delete all ```Question [0-9]+\r\n```   
 
 
 # 2. Question number
@@ -47,5 +47,5 @@ replace ```[0-9] point\r\n``` with ```^[0-9]+ point\r\n```
 
 # 4. Line number 
 
-delete all ```^[0-9]{1}\r\n```
+manually delete all ```^[0-9]{1}\r\n```
 
