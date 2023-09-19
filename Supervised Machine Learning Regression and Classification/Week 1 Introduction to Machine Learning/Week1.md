@@ -42,3 +42,120 @@ Example: House price prediction
 
 ## Supervised learning part 2
 
+The other type of supervised learning is classification.  
+
+Classification also takes **(X, y)** as input, and learns from being given "**right answers**", but predict categories from **finite** possible outputs.
+
+|Regression|Classification|
+|:--|:--|
+|Predict a **number**|Predict **categories**|
+|**Infinitely** many posible outputs|**small number** of possible outputs|
+
+<br/>
+
+Example: Cancer detection   
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202309131559201.png)
+
+
+## Unsupervised learning part 1
+
+Definition: the data comes **only with inputs x** but not output labels y,
+and the algorithm has to find some structure or some pattern or something interesting in the data. 
+
+**clustering**
+* example: Google news, DNA microarray, Grouping customers
+
+
+## Unsupervised learning part 2
+3 types:  
+
+* Clustering  
+  * Group similar data points together.  
+* Anormaly detection  
+  * Find unusual data points.  
+* Dimensionality reduction  
+  * Compress data using fewer numbers.  
+
+# Practice Quiz: Supervised vs unsupervised learning
+
+1. Which are the two common types of supervised learning? (Choose two)
+
+* Clustering
+
+* **Regression**
+
+* **Classification** 
+
+2. Which of these is a type of unsupervised learning?
+
+* **Clustering**
+
+* Classification
+
+* Regression
+
+
+# Regression Model
+
+## Linear Regression Model Part 1
+
+That just means **fitting a straight line** to your data.
+It's probably the most widely used learning algorithm in the world today. 
+
+**Linear regression** is one example of a regression model.
+
+Example: predicting house prices
+
+### Terminology
+
+* training set  
+* $x$/input/feature
+* $y$/output/target
+* $m$
+* ($x$,$y$)
+* ($x^{(i),},y^{(i)}$), $i$ means index
+
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202309191432793.png)
+
+
+## Linear regression model part 2
+
+Input: training set: ($x$, $y$) pairs  
+Output: $f$  
+Output: $\hat{y}$, according to given x
+
+Model: $f(x) = f_{w,b}(x) = wx + b$
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202309191513207.png)
+
+
+## Cost function formula
+
+The first thing is to define **cost function**.
+The cost function will tell us how well
+the model is doing so that we can try to get it to do better. 
+
+Model: $f(x) = f_{w,b}(x) = wx + b$
+
+**w,b**: parameters/**coefficients**/weights
+
+### How to find $w$, $b$
+
+Find good $w$ and $b$, so that $\hat{y}^{i}$ as close to $y^{i}$ as possible.
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202309191710463.png)
+
+the 2 is just for looking neat.
+
+Different people use different cost funciton for different applications, but the **squared error cost function** is by far the most commonly used one for **linear regression**.
+
+
+<br>
+
+# Practice Quiz: Regression Model
+
+# Train the model with gradient descent
+
+# Practice quiz: Train the model with gradient descent
