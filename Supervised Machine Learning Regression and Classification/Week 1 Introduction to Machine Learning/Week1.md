@@ -151,6 +151,22 @@ the 2 is just for looking neat.
 
 Different people use different cost funciton for different applications, but the **squared error cost function** is by far the most commonly used one for **linear regression**.
 
+## Cost function intuition
+
+Simplifing the cost function $f_w(x) = wx + b$ to $f_w(x) = wx$.
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202309201729181.png)
+
+Then we can easily calculate values of $f_w(x)$ and draw a plot about $j(w)$. 
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202309201728421.png)
+
+Finally, we can achieve **the goal of linear regression: find $minimize_{w,b}J(w,b)$**
+
+
+## Visualizing the cost function
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202309201746817.png)
 
 <br>
 
