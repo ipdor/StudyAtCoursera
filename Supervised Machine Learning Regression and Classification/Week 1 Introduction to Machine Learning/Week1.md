@@ -124,7 +124,8 @@ Example: predicting house prices
 
 Input: training set: ($x$, $y$) pairs  
 Output: $f$  
-Output: $\hat{y}$, according to given x
+Input of $f$ : $x$  
+Output of $f$: $\hat{y}$
 
 Model: $f(x) = f_{w,b}(x) = wx + b$
 
@@ -168,10 +169,25 @@ Finally, we can achieve **the goal of linear regression: find $minimize_{w,b}J(w
 
 ![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202309201746817.png)
 
+
+
+## Visualization examples
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202309211655803.png)
+
+In linear regression, instead of manually trying to find the best $w$ and $b$, we use **gradient descent** to find $w$ and $b$ that **minimizes the cost function $j$**.
+
+Gradient descent and variations on gradient descent are used to train, not just linear regression, but some of the biggest and most complex models in all of AI.
+
 <br>
 
 # Practice Quiz: Regression Model
 
 # Train the model with gradient descent
+
+## Gradient descent
+
+
+
 
 # Practice quiz: Train the model with gradient descent
