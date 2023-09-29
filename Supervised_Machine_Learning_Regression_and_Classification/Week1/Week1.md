@@ -4,7 +4,7 @@ date: 2023-09-10
 tags: [课程笔记, Machine Learning]
 ---
 # Introduction
-这节课是Coursera上吴恩达的机器学习入门课[Supervised Machine Learning: Regression and Classification](https://ww.coursera.org/learn/machine-learning)，也是[Machine Learning Specialization](https://ww.coursera.org/specializations/machine-learning-introduction)这个专项的第一节课。
+这节课是Coursera上吴恩达的机器学习入门课[Supervised Machine Learning: Regression and Classification](https://w.coursera.org/learn/machine-learning)，也是[Machine Learning Specialization](https://w.coursera.org/specializations/machine-learning-introduction)这个专项的第一节课。
 
 文章按照课程结构来组织，每周的课程作为一篇文章，其中每个单元作为一级标题，每个视频/材料/测验课作为二级标题，视频课中再根据内容分我三级、四级标题等。
 
@@ -234,8 +234,116 @@ Which of the following are the inputs, or features, that are fed into the model 
 
 ## Gradient descent
 
+Gradient descent: find the minimum value of a cost function(for linear regression or any function)
 
+Outline:   
+1. Start with some $w$, $b$
+2. Keep changing $w$, $b$ to reduce $J(w,b)$
+3. Until we settle at or near a local minimum(not necessirially the only 1 and the global minimum)
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/20230929193609.png)
+
+Started from different point, we may get different local minimum.
+
+## Implementing gradient descent
+
+Gradient descent algorithm:
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/20230929193850.png)
+
+Here, $\alpha$ is learning rate, a small value between $(0, 1)$, $\frac{?}{?w} J(w,b)$ is derivative.
+
+Just simultaneously update $w$ and $b$, like that:
+
+> $tmp\_w = w - \alpha \frac{?}{?w} J(w,b)$  
+>
+> (update variable $w$ here is incorrect!)
+> 
+> $tmp\_b = b - \alpha \frac{?}{?b} J(w,b)$    
+> 
+> $w = tmp\_w$
+> 
+> $b = tmp\_b$
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/n7JrkYmhTLyya5GJoay8ww_d56fe65b44c84abe8f84e42eaf9223a1_w1l3ivq_4.png)
+
+
+
+## Gradient descent intuition
+
+When the derivative $\frac{?}{?w} J(w,b) > 0$, is a **positive** number, $w$ decreases and get closer to a local minimum.
+
+When the derivative $\frac{?}{?w} J(w,b) < 0$, is a **negative** number, $w$ increases and get closer to a local minimum.
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/20230929200713.png)
+
+## Learning rate
+
+
+If the learning rate is **too small**, then gradient descents will work, but it will be slow. 
+
+If the learning rate is **too large**,
+then creating the sense may overshoot and may never reach the minimum. 
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/20230929201501.png)
+
+**What if we've already reached a minimum?**
+
+> The derivative $\frac{?}{?w} J(w,b) = 0$ now, so cost function is 0.  
+> 
+> **Gradient descent don't change $w$ any more.**
+
+Finally, when we get closer to a local minimum, gradient descent will automatically take smaller steps, because derivative becomes smaller.
+
+
+
+## Gradient descent for linear regression
+
+Put knowledge together, we get the final gradient descent algorithm:
+
+> $w = w - \alpha \frac{1}{m} \sum_{i=1}^{m}(f_{w,b}(x^{(i)}) - y^{(i)})x^{(i)}$  
+> 
+> $b = b - \alpha \frac{1}{m} \sum_{i=1}^{m}(f_{w,b}(x^{(i)}) - y^{(i)})$    
+
+
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/20230929202404.png)
+
+## Running gradient descent
+
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/20230929203027.png)
+
+"Batch" gradient descent
+> "Batch": Each step of gradient descent uses all the training examples.
 
 
 # Practice quiz: Train the model with gradient descent
 
+### 1. Gradient descent is an algorithm for finding values of parameters w and b that minimize the cost function J.
+
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/20230929193850.png)
+
+When $\frac{?J(w,b)}{?w}$? is a negative number (less than zero), what happens to w after one update step?
+
+</br>
+
+It is not possible to tell if  will increase or decrease. 
+
+$w$ stays the same 
+
+$w$ decreases
+
+**$w$ increases.**
+
+
+### 2. For linear regression, what is the update step for parameter b?
+
+</br>
+
+$b = b - \alpha \frac{1}{m} \sum_{i=1}^{m}(f_{w,b}(x^{(i)}) - y^{(i)})x^{(i)}$
+
+$b = b - \alpha \frac{1}{m} \sum_{i=1}^{m}(f_{w,b}(x^{(i)}) - y^{(i)})$     
+
+(The 2nd one is correct)
