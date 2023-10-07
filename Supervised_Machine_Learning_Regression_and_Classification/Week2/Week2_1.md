@@ -24,7 +24,9 @@ tags: [仁殻永芝, Machine Learning]
 
 ![](https://raw.githubusercontent.com/valueism/Pictures/master/img/aa52579a-b91d-4e22-834d-0cea942d1351image2.png)
 
-30
+> Select this text to see the answer:  
+> <font style=color:rgba(0,0,0,0)>30</font> 
+
 
 2. Which of the following are potential benefits of vectorization? Please choose the best option.
 
@@ -46,3 +48,111 @@ True
 
 ## Feature scaling part 1
 
+### **Why rescale feature(s)?**
+
+Take $f_{w,b}(x_1, x_2) = w_1 * x_1 + w_2 * x_2 + b$ as an example.
+
+When one parameter has a large range, whereas the another one has a much smaller range, there may be some problem. 
+
+Say $x_1 \in [300-2000]$, $x_2 \in [0-5]$, So:   
+1. $w_1$ will be a small value, and $w_2$ is large.    
+2. Even a small $w_1$ changes $J_{w,b}(x)$ a lot, but we need to alter $w_2$ much more to get the same amount of change of $J_{w,b}(x)$.  
+3. The contour plot is tall and skinny, which means more difficulty for gradient descent algorithm to find the local minimum point.
+
+If we rescale them to $x_1, x_2 \in [0-1]$, so they all take on comparable range of values. which causes speed up gradient descent significantly.
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202310071107606.png)
+
+> Reference:  
+> [Importance of Feature Scaling](https://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html)
+
+## Feature scaling part 2
+
+### **How to rescale feature(s)?**
+
+Before scaling, $x_1 \in [300-2000]$, $x_2 \in [0-5]$
+
+1. Feature scaling
+
+scaled x = x divide by the maximum value.
+
+$x_{1,scaled} = \frac{x_1}{2000}, x_{2,scaled} = \frac{x_2}{5}$
+
+So we get $x_1 \in [0.15-1]$, $x_2 \in [0-1]$
+
+2. Mean normalization
+
+calculate mean value $\mu$
+
+scaled x = (x - $\mu$) / (x_max - x_min).
+
+$x_{1,scaled} = \frac{x_1 - \mu_1 }{2000 - 300}, x_{2,scaled} = \frac{x_2 - \mu_2}{5 - 1}$
+
+So we get $x_1 \in [-0.18, 0.82]$, $x_2 \in [-0.46, 0.54]$
+
+3. Z-score normalization 
+
+calculate mean value $\mu$, standard deviation $\sigma$
+
+scaled x = (x - $\mu$) / (x_max - x_min).
+
+$x_{1,scaled} = \frac{x_1 - \mu_1 }{\sigma_1}, x_{2,scaled} = \frac{x_2 - \mu_2}{\sigma_2}$
+
+So we get $x_1 \in [-0.67, 3.1]$, $x_2 \in [-1.6, 1.9]$
+
+</br>
+
+**Rescaling data or not** depends on its range:  
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202310071340206.png)
+
+
+### Quiz
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202310071356701.png)
+Which of the following is a valid step used during feature scaling? 
+
+* Multiply each value by the maximum value for that feature
+
+* **Divide each value by the maximum value for that feature**
+
+> Select this text to see the answer:  
+> <font style=color:rgba(0,0,0,0)>
+By dividing all values by the maximum, the new maximum range of the rescaled features is now 1 (and all other rescaled values are less than 1).</font> 
+
+
+## Checking gradient descent for convergence
+
+### How to check if gradient descent is converging?
+
+1. Draw the iteration-$J_{w,b}(x)$ plot, and see if it will gradually close to a certain value.   
+2. Calculate $diff=cost - cost_lasttime$, set $\epsilon$ to a small value. If $diff < \epsilon$, then it is converging.
+
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202310071428282.png)
+
+
+
+## Choosing the learning rate
+
+
+When gradient descent is diverging, it is due to **bug** in code or an **inappropriate learning rate**.
+
+How to differentiate?  
+Take a very small learning rate $\alpha$ (It is not a good practice), if $J_{w,b}(x)$ not decreases on every iteration, there must be a bug in code.
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202310071501503.png)
+
+### **How to choose learning rate?**
+
+1. Find a small learning rate $\alpha_1$, so $J_{w,b}(x)$ decreases on every iteration
+2. Increase the learning rate $\alpha_1$ gradually.
+
+
+try $\alpha$:  
+$0.001　　　0.01　　　0.1　　　1$
+
+More specifically, if `0.001` works, then increase the learning rate threefold to `0.003`, and so on:  
+$\textbf{0.001} 　　　0.003　　　\textbf{0.01}　　　0.03　　　\textbf{0.1}　　　0.3　　　\textbf{1}$
+
+　
