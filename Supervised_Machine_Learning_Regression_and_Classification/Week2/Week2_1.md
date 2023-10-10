@@ -152,7 +152,73 @@ Take a very small learning rate $\alpha$ (It is not a good practice), if $J_{w,b
 try $\alpha$:  
 $0.001　　　0.01　　　0.1　　　1$
 
-More specifically, if `0.001` works, then increase the learning rate threefold to `0.003`, and so on:  
+More specifically, if $\alpha$ = `0.001` works, then increase the learning rate threefold to `0.003`, and so on:  
 $\textbf{0.001} 　　　0.003　　　\textbf{0.01}　　　0.03　　　\textbf{0.1}　　　0.3　　　\textbf{1}$
 
 　
+## Feature engineering
+
+In order to make it easier for the learning algorithm to make accurate predictions, we need feature engineering. so we can fit not just straight lines, but curves, non-linear functions to data. 
+
+Feature engineering:  
+> Using **intuition** to design **new features**, by *transforming* or *combining* original features.
+
+Example:  
+combine $x_1$ frontage with $x_2$ depth, use $x_3 = x_1 * x_2$ as the third feature.
+
+
+## Polynomial regression
+
+When combining features, we get polynomial regression. Variables in it may have higher power, like 2 or 3, even 1/2. Data preprocessing will be more important here.
+
+Finally, just choose the best express to fit our data.
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/20231009223111.png)
+
+
+# Practice quiz: Gradient descent in practice
+
+1. Which of the following is a valid step used during feature scaling? 
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202310101536451.png)
+
+Add the mean (average) from each value and and then divide by the (max - min).
+
+**Subtract the mean (average) from each value and then divide by the (max - min).**
+
+2. Suppose a friend ran gradient descent three separate times with three choices of the learning rate α and plotted the learning curves for each (cost J for each iteration).
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202310101537641.png)
+
+For which case, A or B, was the learning rate α likely too large?
+
+
+**case B only**
+
+case A only 
+
+Both Cases A and B
+
+Neither Case A nor B 
+
+
+3. Of the circumstances below, for which one is feature scaling particularly helpful?
+
+**Feature scaling is helpful when one feature is much larger (or smaller) than another feature.
+**
+Feature scaling is helpful when all the features in the original data (before scaling is applied) range from 0 to 1.
+
+
+4. You are helping a grocery store predict its revenue, and have data on its items sold per week, and price per item. What could be a useful engineered feature?
+
+For each product, calculate the number of items sold divided by the price per item.
+
+**For each product, calculate the number of items sold times price per item.**
+
+
+5. True/False? With polynomial regression, the predicted values f_w,b(x) does not necessarily have to be a straight line (or linear) function of the input feature x.
+
+
+**True**
+
+False 
+
