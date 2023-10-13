@@ -261,4 +261,55 @@ The update steps look like the update steps for linear regression, but the defin
 
 ## The problem of overfitting
 
+* The left example is **underfit** which has **high bias** (it's just not even able to fit the training set that well).
+* The example on the center is pretty well, **generalize well**, which means to make good predictions even on brand new examples that it has never seen before. 
+* The right one is **overfit** and has **high variance**. It has fit the data almost too well so that it does not look like this model will generalize to new examples.
+
+
+
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202310131226608.png)
+
+
+
+In the right, having all these higher-order polynomial features allows the algorithm to choose this really over the complex decision boundary.
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202310131232484.png)
+
+### Quiz
+Our goal when creating a model is to be able to use the model to predict outcomes correctly for **new examples**. A model which does this is said to **generalize** well. 
+
+When a model fits the training data well but does not work well with new examples that are not in the training set, this is an example of:
+
+None of the above
+
+**Overfitting (high variance)**
+
+Underfitting (high bias) 
+
+A model that generalizes well (neither high variance nor high bias) 
+Correct
+
+> This is when the model does not generalize well to new examples.
+
+
+## Addressing overfitting
+
+1. Collecting more data
+
+If you're able to get more data, that is more training examples on features, then with the larger training set, the learning algorithm will learn to fit a function that is less wiggly. 
+
+2. Select features 
+
+A great number of features needs more data.
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202310131934977.png)
+
+3. Regularization
+
+Reduce the weight of parameters (usually $\vec{w}$)
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/202310131940944.png)
+
+
 
