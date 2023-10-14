@@ -313,3 +313,10 @@ Reduce the weight of parameters (usually $\vec{w}$)
 
 
 
+## Cost function with regularization
+  
+
+## Regularized linear regression
+
+
+## Regularized logistic regression
