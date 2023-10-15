@@ -314,9 +314,90 @@ Reduce the weight of parameters (usually $\vec{w}$)
 
 
 ## Cost function with regularization
-  
+
+When computing the cost function, taking $w_j$ into accounts prevents it from getting large, and causing overfit(Usually, we don't regularize the parameter $b$.).
+
+![](https://raw.githubusercontent.com/valueism/Pictures/master/img/20231015133623.png)
+
+
+Solution:  
+Add a new item, **regularization term** $\boldsymbol{\frac{\lambda}{2m} \sum\limits_{j=1}^{n}w^2_j}$, to cost function.
+
+Here $\lambda > 0$ and $\lambda$ called lambda or **regularization parameter**
+
+$$J(\vec{w}, b) = \frac{1}{2m} \sum\limits_{i = 1}^{m} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})^2 \boldsymbol{+ \frac{\lambda}{2m} \sum\limits_{j=1}^{n}w^2_j}$$
+
+This new cost function trades off **two goals**:  
+1. Trying to minimize this first term encourages the algorithm to fit the training data well by minimizing the squared differences of the predictions and
+the actual values. 
+2. And try to minimize the second term. The algorithm also tries to keep the parameters $w_j$ small, which will tend to reduce overfitting. 
+
+The **value of lambda** specifies the relative importance or the relative trade off or how you balance between these two goals. 
+* When $w_j \approx 0$, cost function $J(\vec{w}, b)$ is almost the original version: it only fit data but may overfit.
+* When $w_j \approx \infty$, cost function $J(\vec{w}, b)$ almost only have the second term, which means $w_j$ is very small and don't fit data. $f_{\vec{w},b}(\vec{x}) \approx b$
+
 
 ## Regularized linear regression
 
 
+The **equation for the cost function regularized linear regression** is:
+$$J(\mathbf{w},b) = \frac{1}{2m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)})^2  + \frac{\lambda}{2m}  \sum_{j=0}^{n-1} w_j^2 \tag{1}$$ 
+where:
+$$ f_{\mathbf{w},b}(\mathbf{x}^{(i)}) = \mathbf{w} \cdot \mathbf{x}^{(i)} + b  \tag{2} $$ 
+
+Including <span style="color:blue">
+    $\frac{\lambda}{2m}  \sum_{j=0}^{n-1} w_j^2$ </span> this term encourages gradient descent to minimize the size of the parameters. Note, in this example, the parameter $b$ is not regularized. This is standard practice.
+
+### Computing the Gradient with regularization (both linear/logistic)
+The gradient calculation for both linear and logistic regression are nearly identical, differing only in computation of $f_{\mathbf{w}b}$.
+$$\begin{align*}
+\frac{\partial J(\mathbf{w},b)}{\partial w_j}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)})x_{j}^{(i)}  +  \frac{\lambda}{m} w_j \tag{2} \\
+\frac{\partial J(\mathbf{w},b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)}) \tag{3} 
+\end{align*}$$
+
+* m is the number of training examples in the data set      
+* $f_{\mathbf{w},b}(x^{(i)})$ is the model's prediction, while $y^{(i)}$ is the target
+
+      
+* For a  <span style="color:blue"> **linear** </span> regression model  
+    $f_{\mathbf{w},b}(x) = \mathbf{w} \cdot \mathbf{x} + b$  
+* For a <span style="color:blue"> **logistic** </span> regression model  
+    $z = \mathbf{w} \cdot \mathbf{x} + b$  
+    $f_{\mathbf{w},b}(x) = g(z)$  
+    where $g(z)$ is the sigmoid function:  
+    $g(z) = \frac{1}{1+e^{-z}}$   
+    
+The term which adds regularization is  the <span style="color:blue"> $\frac{\lambda}{m}w_j$ </span>.
+
 ## Regularized logistic regression
+
+For regularized **logistic** regression, the cost function is of the form
+$$J(\mathbf{w},b) = \frac{1}{m}  \sum_{i=0}^{m-1} \left[ -y^{(i)} \log\left(f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right) - \left( 1 - y^{(i)}\right) \log \left( 1 - f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right) \right] + \frac{\lambda}{2m}  \sum_{j=0}^{n-1} w_j^2 \tag{3}$$
+where:
+$$ f_{\mathbf{w},b}(\mathbf{x}^{(i)}) = sigmoid(\mathbf{w} \cdot \mathbf{x}^{(i)} + b)  \tag{4} $$ 
+
+Including <span style="color:blue">
+    $\frac{\lambda}{2m}  \sum_{j=0}^{n-1} w_j^2$ </span> this term encourages gradient descent to minimize the size of the parameters. Note, in this example, the parameter $b$ is not regularized. This is standard practice. 
+
+
+
+### Computing the Gradient with regularization (both linear/logistic)
+The gradient calculation for both linear and logistic regression are nearly identical, differing only in computation of $f_{\mathbf{w}b}$.
+$$\begin{align*}
+\frac{\partial J(\mathbf{w},b)}{\partial w_j}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)})x_{j}^{(i)}  +  \frac{\lambda}{m} w_j \tag{2} \\
+\frac{\partial J(\mathbf{w},b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)}) \tag{3} 
+\end{align*}$$
+
+* m is the number of training examples in the data set      
+* $f_{\mathbf{w},b}(x^{(i)})$ is the model's prediction, while $y^{(i)}$ is the target
+
+      
+* For a  <span style="color:blue"> **linear** </span> regression model  
+    $f_{\mathbf{w},b}(x) = \mathbf{w} \cdot \mathbf{x} + b$  
+* For a <span style="color:blue"> **logistic** </span> regression model  
+    $z = \mathbf{w} \cdot \mathbf{x} + b$  
+    $f_{\mathbf{w},b}(x) = g(z)$  
+    where $g(z)$ is the sigmoid function:  
+    $g(z) = \frac{1}{1+e^{-z}}$   
+    
+The term which adds regularization is  the <span style="color:blue"> $\frac{\lambda}{m}w_j$ </span>.
