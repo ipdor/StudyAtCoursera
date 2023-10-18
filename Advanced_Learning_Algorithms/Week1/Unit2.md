@@ -55,3 +55,26 @@ $a^{[2]}$ is similar to $a^{[1]}$, but with 15 units(neurons), not 25.
 $a^{[3]} = \left[g(\vec{w}_1^{[3]} \cdot \vec{a}^{[2]} + b_1^{[3]})\right]$
 
 
+# Quiz
+
+## Practice quiz: Neural network model
+
+
+1. For a neural network, what is the expression for calculating the activation of the third neuron in layer 2? Note, this is different from the question that you saw in the lecture video.
+
+
+
+
+
+2. For the handwriting recognition task discussed in lecture, what is the output $a_1^{[3]}$??
+
+
+The estimated probability that the input image is of a number 1, a number that ranges from 0 to 1.
+
+A vector of several numbers, each of which is either exactly 0 or 1 
+
+A number that is either exactly 0 or 1, comprising the network¡¯s prediction 
+
+A vector of several numbers that take values between 0 and 1 
+
+
