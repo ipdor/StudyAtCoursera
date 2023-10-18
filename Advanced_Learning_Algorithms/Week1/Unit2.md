@@ -1,6 +1,6 @@
 ---
 title: "Advanced Learning Algorithms:Week1-Unit2-Neural network model"
-date: 2023-10-
+date: 2023-10-17
 tags: [¿Î³Ì±Ê¼Ç, Machine Learning]
 ---
 
