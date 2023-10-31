@@ -59,7 +59,22 @@ model.fit(X, Y, epochs=100)
 
 # Improved implementation of softmax
 
-To reduce numerical roundoff error, we slightly change the Tensorflow code:
+```python
+x = 2/10000
+print(x)
+```
+output:
+> 0.0002
+
+
+```python
+x = (1+1/10000) - (1-1/10000)
+print(x)
+```
+output:
+> 0.00019999999999997797
+
+The second one has numerical roundoff error.  To reduce such error, we slightly change the Tensorflow code:
 
 ![](https://raw.githubusercontent.com/valueism/Pictures/master/img/20231028101633.png)
 
@@ -93,7 +108,7 @@ Given an image X, is there a car? a bus? a pedestrian?
 
 # Practice quiz: Multiclass Classification
 
-1.For a multiclass classification task that has 4 possible outputs, the sum of all the activations adds up to 1. For a multiclass classification task that has 3 possible outputs, the sum of all the activations should add up to …
+1.For a multiclass classification task that has 4 possible outputs, the sum of all the activations adds up to 1. For a multiclass classification task that has 3 possible outputs, the sum of all the activations should add up to ?
 
 ![](https://raw.githubusercontent.com/valueism/Pictures/master/img/f38d2d9d-5e70-4900-bd84-baf812439294image2.png)
 
@@ -123,7 +138,7 @@ z_3
 
 > Correct. When the true label is 3, then the cross entropy loss for that training example is just the negative of the log of the activation for the third neuron of the softmax. All other terms of the cross entropy loss equation (?log(a1),?log(a2),and?log(a4)) are ignored
 
-1. For multiclass classification, the recommended way to implement softmax regression is to set from_logits=True in the loss function, and also to define the model's output layer with…
+1. For multiclass classification, the recommended way to implement softmax regression is to set from_logits=True in the loss function, and also to define the model's output layer with?
 
 ![](https://raw.githubusercontent.com/valueism/Pictures/master/img/f38d2d9d-5e70-4900-bd84-baf812439294image5.png)
 
