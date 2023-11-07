@@ -63,6 +63,13 @@ Spliting data set into 3 sets as follows:
 2. Picking the model with the lowest $J_{cv}$;   
 3. Calculate the test set error $J_{test}$ using **test set** as estimate generalization error.
 
+
+| data             | % of total | Description |
+|------------------|:----------:|:---------|
+| training         | 60         | Data used to tune model parameters $w$ and $b$ in training or fitting |
+| cross-validation | 20         | Data used to tune other model parameters like degree of polynomial, regularization or the architecture of a neural network.|
+| test             | 20         | Data used to test the model after tuning to gauge performance on new data |
+
 ![](https://raw.githubusercontent.com/valueism/Pictures/master/img/20231104152216.png)
 
 It also can be used in neural network:
