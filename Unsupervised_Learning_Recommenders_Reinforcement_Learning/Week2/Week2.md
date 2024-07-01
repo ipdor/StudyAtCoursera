@@ -278,23 +278,24 @@ The two movies are very dissimilar.
 
 ### 3. Which of the following neural network configurations are valid for a content based filtering application? Please note carefully the dimensions of the neural network indicated in the diagram. Check all the options that apply:
 
-![alt text](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/62d86c86-30aa-41a3-a88b-bad03438f032image3.png?expiry=1719792000000&hmac=kXo8jC4QvfM7W43r8sG6bj8ohVHn-chjly70A15rD5M)
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701212755.png)
 
 The user and the item networks have different architectures
 
 > Correct. User and item networks can be the same or different sizes.
 
-![alt text](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/62d86c86-30aa-41a3-a88b-bad03438f032image2.png?expiry=1719792000000&hmac=9CSbViZ84Y6BqvSftzygeldBdU_wmefHORBNgq493YA)
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701213014.png)
+
 
 The user and item networks have 64 dimensional v_u and v_m vector respectively 
 
 > Correct. Feature vectors can be any size so long as vuvu? and vmvm? are the same size.
 
-![alt text](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/62d86c86-30aa-41a3-a88b-bad03438f032image5.png?expiry=1719792000000&hmac=HL3WuRLnrHawRPs_KGA1bQ0riBABOr6IjExHsMPnbQs)
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701212834.png)
 
 The user vector v_u is 32 dimensional, and the item vector v_m is 64 dimensional
 
-![alt text](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/62d86c86-30aa-41a3-a88b-bad03438f032image4.png?expiry=1719792000000&hmac=my57LmMOV874-pPJQlRhUy7tt2CH5sX9dki0qR-_jdc)
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701212912.png)
 
 Both the user and the item networks have the same architecture
 

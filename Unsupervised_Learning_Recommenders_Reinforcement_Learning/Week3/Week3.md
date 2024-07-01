@@ -4,6 +4,57 @@ date: 2024-06-26
 tags: [¿Î³Ì±Ê¼Ç, Machine Learning]  
 ---
 
+# What is Reinforcement Learning?
+
+Just telling reinforcement learning algorithms what is good and what is bad, instead of how, they can decide how to achieve a goal.
+
+Application:  
+* Controlling robots  
+* Factory optimization  
+* Financial (stock) trading  
+* Playing games (including video games)
+
+
+# Mars rover example
+
+Taking the ars rover as example, there are **four key elements** in reinforcement learning.
+
+* State $S$  
+  * The position of the Mars rover is  
+called the **state** in reinforcement learning  
+* Action $a$  
+  * In every step, it has to take an action.  
+* Reward $R(s)$  
+  * Reward functions tell the rover what to do.  
+* Next State $S'$  
+  * After taking action, the rover swiches to another state.
+
+>  To summarize, at every time step, the robot is in some **state**, which I'll call S, and it gets to choose an **action**, and it also enjoys some **rewards**, R of S that it gets from that state. As a result of this action, it to some **new state** S prime. 
+
+# The Return in reinforcement learning
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701211132.png)
+
+The **return** is defined as the sum of these rewards but weighted by one additional factor, which is called the **discount factor** ($\gamma$,$0<\gamma<1$) . 
+
+What the discount factor Gamma does is it has the effect of making the reinforcement learning algorithm a little bit impatient. Because of the value of time.
+
+
+# Making decisions: Policies in reinforcement learning
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701211742.png)
+
+The goal of reinforcement learning is to find a policy $\pi$ or $\pi$ of S that tells you what action to take in every state so as to maximize the return. 
+
+# Review of key concepts
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701212301.png)
+
+## Markov decision process (MDP)
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701212433.png)
+
+The term Markov in the MDP or Markov decision process refers to that the future only depends on the current state and not on anything that might have occurred prior to getting to the current state. 
 
 
 # Quiz: Reinforcement learning introduction
@@ -47,7 +98,9 @@ R(1) > R(2) > R(3), where R(1), R(2) and R(3) are negative.
 
 ### 4. Given the rewards and actions below, compute the return from state 3 with a discount factor of ¦Ã=0.25¦Ã=0.25.
 
-![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/ab8c69e8-08f0-4ad4-a4f6-cb67e091a5fbimage2.png?expiry=1719792000000&hmac=Mvml61DChRW7ELnxItEtlzLsUf7cu36kUGPOCfvdQuw)
+<!--![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/ab8c69e8-08f0-4ad4-a4f6-cb67e091a5fbimage2.png?expiry=1719792000000&hmac=Mvml61DChRW7ELnxItEtlzLsUf7cu36kUGPOCfvdQuw)-->
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701211820.png)
 
 
 0.39
@@ -103,7 +156,9 @@ Impossible to tell
 
 ### 3. For this problem, ¦Ã=0.25¦Ã=0.25. The diagram below shows the return and the optimal action from each state. Please compute Q(5, ¡û). 
 
-![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/3cbf737d-d132-4a1f-8e14-8865ff330e28image3.png?expiry=1719792000000&hmac=06ejceKnpFKU_1ohSmelcvQb6UB7hQL7RAw2bELmlec)
+<!--![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/3cbf737d-d132-4a1f-8e14-8865ff330e28image3.png?expiry=1719792000000&hmac=06ejceKnpFKU_1ohSmelcvQb6UB7hQL7RAw2bELmlec)-->
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701211910.png)
 
 **0.625**
 
