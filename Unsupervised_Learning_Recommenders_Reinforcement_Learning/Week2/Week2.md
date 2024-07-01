@@ -209,18 +209,49 @@ A recommendation system is so computationally expensive that it causes your comp
 
 # Collaborative filtering vs Content-based filtering
 
+Collaborative filtering:  
+Recommend items to you based on ratigs of users who gave similar ratings as you;  
 
-# 
+Content-based filtering:
+Recommend items to you based on features of user and item to find good match.
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701195356.png)
+
+For user $j$, we compute $V_u^{(j)}$ from user' preference $X_u^{(j)}$ and $V_m^{(i)}$ from movies' features $X_m^{(i)}$.
+
+$X_u^{(j)}$ and $X_m^{(i)}$ may be different, but $V_u^{(j)}$ and $V_m^{(i)}$ have the same size.
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/6e527ddc6dc549fea37de7ab2784e9f2.png)
+
+# Deep learning for content-based filtering
+
+The output layers of two neural network must have the same number of units.
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701200536.png)
+
+## Find similar items
+
+For movie $i$, we can find a similar movie by finding the $k$ so that $||V_m^{(k)} - V_m^{(i)}||^2$ is the smallest.
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701200809.png)
+
+# Recommending from a large catalogue
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701201319.png)
+
+1. Retrieval  
+  According to all filter algorithms, generate a large list of possible item.  
+1. Ranking  
+  Use the list as the input of neural network.
+
+The more items are in the list, the more time costs, and hopefully the better quality is. 
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701201412.png)
 
 
-#
+# TensorFlow implementation of content-based filtering
 
-
-#
-
-#
-
-#
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701202213.png)
 
 # Quiz: Content-based filtering
 
@@ -243,7 +274,7 @@ We should recommend to users one of these two movies, but not both.
 
 The two movies are very dissimilar.
 
-> Correct. Similar movies generate similar vmvm?¡¯s.
+> Correct. Similar movies generate similar vm?¡¯s.
 
 ### 3. Which of the following neural network configurations are valid for a content based filtering application? Please note carefully the dimensions of the neural network indicated in the diagram. Check all the options that apply:
 
@@ -260,10 +291,10 @@ The user and item networks have 64 dimensional v_u and v_m vector respectively
 > Correct. Feature vectors can be any size so long as vuvu? and vmvm? are the same size.
 
 ![alt text](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/62d86c86-30aa-41a3-a88b-bad03438f032image5.png?expiry=1719792000000&hmac=HL3WuRLnrHawRPs_KGA1bQ0riBABOr6IjExHsMPnbQs)
+
 The user vector v_u is 32 dimensional, and the item vector v_m is 64 dimensional
 
 ![alt text](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/62d86c86-30aa-41a3-a88b-bad03438f032image4.png?expiry=1719792000000&hmac=my57LmMOV874-pPJQlRhUy7tt2CH5sX9dki0qR-_jdc)
-
 
 Both the user and the item networks have the same architecture
 
@@ -290,3 +321,8 @@ The system¡¯s response time might decrease (i.e., users get recommendations more
 False 
 
 > Correct. The output of the item/movie neural network, vmvm? is not dependent on the user network when making predictions. Precomputing the results speeds up the prediction process.
+
+
+# Principal Component Analysis
+
+I didn't take these optional courses.
