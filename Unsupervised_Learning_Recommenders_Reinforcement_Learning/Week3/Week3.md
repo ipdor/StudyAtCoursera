@@ -113,15 +113,63 @@ R(1) > R(2) > R(3), where R(1), R(2) and R(3) are negative.
 
 >Correct. If starting from state 3, the rewards are in states 3, 2, and 1. The return is 0+(0.25)¡Á0+(0.25)2¡Á100=6.250+(0.25)¡Á0+(0.25)2¡Á100=6.25.
 
+# State-action value function definition
+
+The **state action value function** Q is a function of a state you might be in as well as the action you might choose to take in that state and Q of s,a.   
+It's also called Q function, $Q^*$, optimal Q function.
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701214924.png)
+
+Just take action A and state S can then behave optimally after that.
 
 
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701215612.png)
 
-# 
+In every state $s$, the action $a$ that gives $max_a Q(s,a)$ is the best action. For this $a$, the $Q(s,a)$ is the best return.
+
+Therefore:  
+* **Policy** $\pi$ finds such $a$ with $max_a Q(s,a)$  
+* -> Find the best **action** $a$ for every state
+* -> get the best **return** in every step.  
+
+# State-action value function example
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701220613.png)
+
+# Lab: State-action value function (optional lab)
+
+see State-action value function example.ipynb
+
+# Bellman Equation
+
+$s$: current state  
+$a$: current action  
+$s'$: state you get to after taking action $a$  
+$a'$: action that you take in state $s'$
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701221312.png)
+
+Bellman Equation composes **two parts**:  
+* the reward $R(s)$ you get right away.  
+* the discount $\gamma$ multiplies the best return in the next state.
+
+begin state $s_1$ -> state $s_2$ -> state $s_2$ -> .... -> terminal state $s_n$
+
+For best **return**:  
+the best action $a_1$ for state $s_{n-1}$  
+-> the best action $a_2$ for state $s_{n-2}$  
+-> ....   
+-> the best action $a_{n-1}$ for state $s_1$
 
 
-#
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240701221430.png)
 
-#
+
+# Random (stochastic) environment (Optional)
+
+In a stochastic environment, sometimes programs may fail. So what we're interested in is maximizing the **average value** of the sum of discounted rewards.
+
+$$Q(s,a) = R(s) + \gamma E[max_{a'}Q(s', a')]$$
 
 
 # Quiz: State-action value function
@@ -170,7 +218,15 @@ Impossible to tell
 
 > Correct. Yes, we get 0 reward in state 5. Then 0?0.25 discounted reward in state 4, since we moved left for our action. Now we behave optimally starting from state 4 onwards. So, we move right to state 5 from state 4 and receive 0?0.252 discounted reward. Finally, we move right in state 5 to state 6 to receive a discounted reward of 40?0.25^3. Adding these together we get 0.625.
 
+# Example of continuous state space applications
 
+
+# 
+
+# 
+
+
+# 
 
 # Quiz: Continuous state spaces
 
