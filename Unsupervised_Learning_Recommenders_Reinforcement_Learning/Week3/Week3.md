@@ -220,13 +220,101 @@ Impossible to tell
 
 # Example of continuous state space applications
 
+So any continuous state reinforcement learning problem or a continuous state Markov decision process, continuously MTP. The state of the problem isn't just one of a small number of possible discrete values,
+like a number from 1-6. Instead, **it's a vector of numbers, any of which could take any of a large number of values**.
 
-# 
+## Example
+* Truck: 
+  * the state is a vector like $[x, y, \theta, \dot{x}, \dot{y}, \dot{\theta}]$, which denotes position in x, position in y, orientation, velocity in x, velocity in y, how quickly is the angle of the car changing.  
+* Helicopter:  
+  * the state is a vector like $[x, y, z, \phi, \theta, \omega, \dot{x}, \dot{y}, \dot{z}, \dot{\phi}, \dot{\theta}, \dot{\omega}]$. Here $\phi, \theta, \omega$ represent the angele of the helicopter in each dimension, and $\dot{\phi}, \dot{\theta}, \dot{\omega}$ respectively is the speed in each dimension.
 
-# 
+
+# Lunar lander
+
+## State and Action
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240703212219.png)
+
+There are four actions in every step.
+
+State $s$ consists of 8 numbers $[x, y, \dot{x}, \dot{y}, \theta, \dot{\theta}, l, r]$. $l, r$ means where the left leg or the right leg is grounded.
+
+## Rewards
+
+After every step, a reward is granted. The total reward of an episode is the sum of the rewards for all the steps within that episode.
+
+For each step, the reward:
+- is increased/decreased the closer/further the lander is to the landing pad.
+- is increased/decreased the slower/faster the lander is moving.
+- is decreased the more the lander is tilted (angle not horizontal).
+- is increased by 10 points for each leg that is in contact with the ground.
+- is decreased by 0.03 points each frame a side engine is firing.
+- is decreased by 0.3 points each frame the main engine is firing.
+
+The episode receives an additional reward of -100 or +100 points for crashing or landing safely respectively.
+
+## Goal
+
+Learn a policy $\pi$ that given $s = [x, y, \dot{x}, \dot{y}, \theta, \dot{\theta}, l, r]$,    
+pick action a = $\pi(s)$ so as to maximize the return.
+
+$\gamma = 0.985$
+
+# Learning the state-value function
+
+## Basic idea
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240703214416.png)
+
+The key idea is that we're going to train a neural network to compute or to approximate the **state action value(overall return gaining by taking action $a$ at the state $s$)** function Q of s, a and that in turn will let us pick good actions. The heart of the learning algorithm is we're going to **train a neural network that inputs the current state $s$ and the current action $a$ and computes or approximates Q of s, a**. 
+
+After that, we can compute the value of $Q(s, a)$ for all four actions, and pick the action $a$ that maximizes $Q(s, a)$.
+
+## Ballman equation
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240703220452.png)
+
+According to the Ballman equation, we can get a tuple $(s, a, R(s), s')$ in every step. Then it can be used to compute a tuple $x=(s,a)$, $y=R(s)+\gamma MAX_{a'}Q(s',a')$.
+
+Such pairs $(x, y)$ become the dateset of our neural network.
+
+* Input: $x$  
+* Label: $y = R(s)+\gamma MAX_{a'}Q(s',a')$  
+* Prediction: y_pred = $Q(s,a)$
+* Loss function: $l = \frac{1}{2N}\sum_{i=1}^N\left[Q(s,a) - R(s)+\gamma MAX_{a'}Q(s',a')\right]^2$
+
+## Deep Q learning Algorithm (DQN)
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240703224216.png)
+
+We need two neural networks $Q$ and $Q_{new}$ to predict $Q(s, a)$ and $MAX_{a'}Q(s',a')$ function.
+
+1. Initialization all parameters randomly.  
+2. Loop, for each round, do:  
+   1. Generating tuples $(s, a, R(s), s')$ using $x=(s,a)$, $y=R(s)+\gamma MAX_{a'}Q(s',a')$ 
+   2. Training $Q_{new}$ so that $Q_{new} \approx y$.
+   3. Updating $Q$ using $Q_{new}$
 
 
-# 
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240703234912.png)
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240703234929.png)
+
+> [DQN Ëã·¨](https://hrl.boyuai.com/chapter/2/dqn%E7%AE%97%E6%B3%95)
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240703221312.png)
+
+# Algorithm refinement: Improved neural network architecture
+
+
+# Algorithm refinement: ?-greedy policy
+
+# Algorithm refinement: Mini-batch and soft updates (optional)
+
+
+# The state of reinforcement learning
+
 
 # Quiz: Continuous state spaces
 
