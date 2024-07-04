@@ -307,14 +307,46 @@ We need two neural networks $Q$ and $Q_{new}$ to predict $Q(s, a)$ and $MAX_{a'}
 
 # Algorithm refinement: Improved neural network architecture
 
+To make the algorithm more efficient, we can set the output layer with four units to output four values.
 
-# Algorithm refinement: ?-greedy policy
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240704195256.png)
+
+
+# Algorithm refinement: $\epsilon$-greedy policy
+
+## Exploration vs. Exploitation
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240704200000.png)
+
+> Because of the random initialization, if the neural network somehow initially gets stuck in this mind that some things are bad idea, just by chance, then option 1, it means that it will never try out those actions and discover that maybe is actually a good idea to take that action, like fire the main thrusters sometimes. Under option 2 on every step, we have some small probability of trying out different actions so that the neural network can learn to overcome its own possible preconceptions about what might be a bad idea that turns out not to be the case. 
+
 
 # Algorithm refinement: Mini-batch and soft updates (optional)
+
+Both techniques can also be used in supervised learning.
+
+## Mini-batch
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240704200734.png)
+
+When data set is very large, the algorithm turns out to be extremely inefficient. To deal with it, we run gradient descent on a random subset of the whole data in every step.  
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240704201115.png)
+
+
+## Soft update  
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240704201307.png)
+
+Soft update is changing $Q$ a little bit every time. It turns out that using the soft update method causes the reinforcement learning algorithm to converge more reliably. It makes it less likely that the reinforcement learning algorithm will oscillate or divert or have other undesirable properties. 
 
 
 # The state of reinforcement learning
 
+## Limitations of reinforcement learning
+* Much easier to get to work in a simulation than a real robot!  
+* Far fewer applications than supervised and unsupervised learning.  
+* But ... exciting research direction with potential for future applications.
 
 # Quiz: Continuous state spaces
 
