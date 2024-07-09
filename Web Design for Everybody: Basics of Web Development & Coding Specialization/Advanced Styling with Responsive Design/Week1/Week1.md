@@ -77,4 +77,77 @@ With this knowledge you can create a search term to match your needs.
 
 # Benefits of Responsive Design
 
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240709220201.png)
+
+There are three types of responsive options:
+* Responsive web design use the same html file and the same URL.   
+* Adaptive design returns different files to different clients.  
+* Separate mobile site (with prefix `.m`) using separate page URL to indicate mobile or desktop.
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240709220624.png)
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240709220640.png)
+
+![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240709220656.png)
+
+Why RWD?  
+* Easier to share your data with a single URL.  
+* Easier to search engines to index the page.  
+* Fewer files = less maintenance.  
+* Less redirection = lower load time.
+
+
+# Reading: Fluid Measurements Background Readings
+
+> I like to include additional resources that align with my lectures and I will be putting these ideas into practice in the next two videos. In this case, I have found three really good articles that relate to my next lecture on Fluid Measurements.
+> 
+> [A W3schools reading on CSS Units](https://www.w3schools.com/css/css_units.asp)
+> 
+> [What's the Deal with Em and Rem?](https://codemyviews.com/blog/whats-the-deal-with-em-and-rem)
+> (**Material here is used in Week Two Assessment**)
+> 
+> [Font Size Idea: px at the Root, rem for Components, em for Text Elements](https://css-tricks.com/rems-ems/) by Chris Coyier.(Please note, some people on Firefox get a warning when using this link. It is not the case for other students.)
+
+# Fluid Measurements
+
+See the previous material: [A W3schools reading on CSS Units](https://www.w3schools.com/css/css_units.asp).
+
+> What tags are absolute measurements, relative measurements, and what is the difference between them? Why we use `rem` instead of `em`?
+
+```
+1em = 12pt = 16px = 100%
+1in = 2.54cm = 25.4mm = 72pt = 12pc
+```
+
+# Code With Me: Fluid Measurements
+
+https://codepen.io/ColleenEMc/pen/pgrYpK
+
+
+# Can a file use fluid and absolute measurements together?
+
+> Check out the code from the Code With Me example: http://codepen.io/ColleenEMc/pen/QyzJGy
+> 
+> * Were there any absolute measurements in this code? If so, where?  
+> 
+> * Will this break our "responsive design?"  Why or why not?
+
+My answer:
+
+* The font size of body is absolute measurement.   
+
+* Yes, it will break responsive design because the font size of all elements inside the body inherits its font size. Therefore, all text on this page will have the same size across all different devices.  
+
+
+# Additional Tools and Resources
+
+Here are some optional resources for you to explore if you are interested in learning more about the topics from this week.
+
+There are so many tools and tips when it comes to CSS we can't possibly cover them all.  But here are three that students have mentioned as being some of the most useful to them.
+
+1. [PXtoEM.com](http://pxtoem.com/) is a pixel to em conversion tool. In the third column you can enter numbers and have the conversion calculated for you.
+
+2. [This CodePen](http://codepen.io/chriscoyier/pen/tvheK) by Chris Coyier will let you use sliders to dynamically change the font size on a page. This demo goes with one of the readings on Fluid Measurements, but I am including it here again just in case you missed the code. You can read it here if you want to know how to use the tool. [Font Size Idea: px at the Root, rem for Components, em for Text Elements](https://css-tricks.com/rems-ems/).
+
+3. Someone sent me [CSS Values and Units Module Level 3](https://www.w3.org/TR/css3-values/#length-value) since it helped them better understand the meaning of "relative" and "absolute" as they relate to CSS. This is a fairly technical document and is not required reading for the course.
 
