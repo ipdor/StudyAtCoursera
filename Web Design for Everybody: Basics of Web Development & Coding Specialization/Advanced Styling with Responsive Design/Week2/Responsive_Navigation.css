@@ -1,0 +1,47 @@
+body{
+	background-color: #F2F2F2;
+	margin: 1%;
+	padding:1%;
+}
+
+nav{
+	border: 1px solid #06425C;
+	color:#06425C;
+	background-color:#FFFFFF;
+	overflow: auto;
+	padding-left:8%;
+}
+/*write your code:*/
+
+nav a{
+  background-color: #0f0;
+
+  padding: 1% 2%;
+  line-height:50px;
+  margin: 1% 2%;
+
+}
+
+@media all and (min-width:900px){
+  nav{
+    display: inline-block;
+    width: 15%;
+    height: 100vh;
+    padding-left:0;
+    background-color: #0f0;
+  }
+
+  section{
+    display: inline-block;
+    width: 70%;
+    padding: 0% 5%;
+    height: 100vh;
+    overflow:auto;
+  }
+
+  nav a{
+    text-align:center;
+    display:block;
+    
+  }
+}
