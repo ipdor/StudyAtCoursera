@@ -61,11 +61,11 @@ Two ways:
 
 # What To Do When Your Tool is Deprecated
 
-* Responsive Design – you want to make sure that your site looks good in multiple viewports
+* Responsive Design ¨C you want to make sure that your site looks good in multiple viewports
 
 * Automated testing - you want to site that can do that testing with as little work on your part as possible
 
-* Browser extension – you may want a tool that you install on your browser so that you do not need to go to a different tab to test a site.
+* Browser extension ¨C you may want a tool that you install on your browser so that you do not need to go to a different tab to test a site.
 
 With this knowledge you can create a search term to match your needs.
 
@@ -80,9 +80,9 @@ With this knowledge you can create a search term to match your needs.
 ![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240709220201.png)
 
 There are three types of responsive options:
-* Responsive web design use the same html file and the same URL.   
-* Adaptive design returns different files to different clients.  
-* Separate mobile site (with prefix `.m`) using separate page URL to indicate mobile or desktop.
+* Responsive web design use the same source code and the same URL.   
+* Adaptive design returns different files to different clients.(If server detected wrong client, it returns a wrong code)  
+* Separate mobile site (with prefix `.m`) using separate page URL to indicate mobile or desktop. (¶ÀÁ¢µÄÒÆ¶¯°æÍøÕ¾)
 
 ![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240709220624.png)
 
@@ -119,6 +119,8 @@ See the previous material: [A W3schools reading on CSS Units](https://www.w3scho
 1in = 2.54cm = 25.4mm = 72pt = 12pc
 ```
 
+> In responsive web design, fluid measurement refers to a technique where the dimensions of elements (such as width, height, padding, margins, etc.) are defined in **relative units rather than fixed units**. This approach allows elements to adjust and scale fluidly based on the size of the viewport or parent container, creating a more flexible and adaptable design.
+
 # Code With Me: Fluid Measurements
 
 https://codepen.io/ColleenEMc/pen/pgrYpK
@@ -151,3 +153,122 @@ There are so many tools and tips when it comes to CSS we can't possibly cover th
 
 3. Someone sent me [CSS Values and Units Module Level 3](https://www.w3.org/TR/css3-values/#length-value) since it helped them better understand the meaning of "relative" and "absolute" as they relate to CSS. This is a fairly technical document and is not required reading for the course.
 
+# Basic Concepts in Responsive Design Approaches
+
+
+### 1. Which fluid measurement type returns a percentage of the viewport width?
+
+**vw**
+
+### 2. Responsive Web Design is...
+
+Designing pages for the mobile view.
+
+Designing multiple pages, one for each type of major device (phone, tablet, laptop, and desktop)
+
+**Designing pages for multiple platforms by incorporating fluid measurements and varying CSS rules.**
+
+
+### 3. Adaptive design with dynamic serving is....
+
+Designing pages for the mobile view.
+
+Designing pages for multiple platforms by incorporating fluid measurements and varying CSS rules.
+
+**Designing multiple pages, one for each type of major device (phone, tablet, laptop, and desktop) and returning the appropriate version based on the device making the page request.**
+
+
+### 4. Which of the following is a true statement about using a separate "m." site for your content?
+
+**It is difficult to keep multiple versions of your site consistent. Any updates must be made in multiple places.**
+
+Some search engines require a .m version of your site.
+
+> This is not the case, and having a separate .m version may actually hurt your search engine results. You can refer to the video on the Benefits of Responsive Design to learn more. 
+
+Users have control over which version of the page they can see, regardless of the device they are using.
+
+> The users are locked into seeing whichever version is returned by the server. (Although some designers include a "link to desktop view", not all do.) You can refer to the video on the Benefits of Responsive Design to learn more.
+
+### 5. The mobile version of your web page should have the same layout of every other version of your site. 
+
+True
+
+**False**
+
+
+### 6. Responsive sites can have a mixture of fluid and absolute measurements. 
+
+**True**
+
+False
+
+
+### 7. When defining a measurement whitespace you must include the unit - even when the measurement is 0.
+
+True
+
+**False**
+
+
+### 8.  For some CSS properties, negative lengths are allowed. 
+
+**True**
+
+False
+
+
+### 9. 1 _____ = 1% of viewport height
+
+**vh**
+
+### 10. An em is the size of an uppercase M in any typeface, making the size relative to the font. 
+
+**True**
+
+False
+
+
+### 11. Which term matches the browser window size?
+
+width
+
+orientation
+
+**viewport**
+
+
+### 12.  Which suggestion does Chris Coyier make in his article on Font Size? 
+
+rem at the Root, em for Components, px for Text Elements
+
+em at the Root, px for Components, rem for Text Elements 
+
+**px at the Root, rem for Components, em for Text Elements**
+
+### 13.  If you have an element with the font size of 32px, and a child element inside with a a font-size set to 2em, what is the font size of the child in px? (Provide a number only, not the measurement too.) 
+
+**64**
+
+
+### 14. Which of the following measurements is relative to the size of its parent element? 
+
+px
+
+**em**
+
+rem
+
+
+### 15. Which measurement is easier and comfortable for the designer/ developer to use when coding their CSS but does not provide the best experience for the user?  
+
+**px**
+
+
+### 16. A tool you install on your browser so that you do not need to go to a different tab to test a site is called 
+
+a cookie
+
+a prefix
+
+**an extension**
