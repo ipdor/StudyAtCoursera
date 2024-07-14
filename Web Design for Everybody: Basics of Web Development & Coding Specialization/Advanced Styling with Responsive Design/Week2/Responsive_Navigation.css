@@ -15,14 +15,16 @@ nav{
 
 nav a{
   background-color: #0f0;
-
   padding: 1% 2%;
   line-height:50px;
   margin: 1% 2%;
-
 }
 
-@media all and (min-width:900px){
+@media all and (min-width:500px){
+  body {
+    width: 100%;
+  }
+
   nav{
     display: inline-block;
     width: 15%;
@@ -31,17 +33,16 @@ nav a{
     background-color: #0f0;
   }
 
-  section{
-    display: inline-block;
-    width: 70%;
-    padding: 0% 5%;
-    height: 100vh;
-    overflow:auto;
-  }
-
   nav a{
     text-align:center;
     display:block;
-    
+  }
+
+  section{
+    display: inline-block;
+    width: 70%;
+    padding: 1% 5%;
+    height: 100vh;
+    overflow:auto;
   }
 }
