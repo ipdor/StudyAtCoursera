@@ -1,5 +1,5 @@
 ---
-title: "Advanced Styling with Responsive Design: Week1"  
+title: "Advanced Styling with Responsive Design: Week2"  
 date: 2024-07-10  
 tags: [¿Î³Ì±Ê¼Ç, Front-End]  
 ---
@@ -123,10 +123,10 @@ Pay attention to order of rules
 > Should your media queries be at the top or bottom of the page?  
 > <font style="color:rgba(0,0,0,0)">It depends. Assuming min-width, put the rules on the bottom. For max-width, it should be on the top.</font>
 
-> [W3Schools Reading on Responsive Web Design](https://www.w3schools.com/css/css_rwd_viewport.asphttps://www.w3schools.com/css/css_rwd_viewport.asp)
+> [W3Schools Reading on Responsive Web Design](https://www.w3schools.com/css/css_rwd_viewport.asp)  
+> Why we need viewport? It's important. Click the link abrove.
 
 # Code With Me: Responsive Navigation
-
 
 > https://codepen.io/ColleenEMc/pen/MaOrXr
 
