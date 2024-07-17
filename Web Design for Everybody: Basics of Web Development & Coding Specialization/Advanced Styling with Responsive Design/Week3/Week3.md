@@ -266,3 +266,24 @@ It isn't uncommon for people to change their color schemes. Less well known is t
 > [axe: Accessibility Testing Tools and Software](https://www.deque.com/axe/)
 
 
+# Accessilibity Testing Options
+
+There are a number of tools and checklists available to use when testing the accessibility of your website.  Some sites provide checklists for manual testing.   Others will provide tools that check for common accessibility issues caused by improper syntax.  This would include missing alt text, improper headings, and/or unclosed tag.    More advanced frameworks will perform a more comprehensive review of your code and check for poor contrast ratios, improper use of ARIA attributes, keyboard accessibility issues, etc.
+
+I believe the best approach is to use automated testing but follow up with manual testing as well.  Tools are created and improved continuously so I would suggest that you do an Internet search for "accessibility checkers" and limit your search to the past 12 months.  In the meantime, here are some tools and checklists.
+General Accessibility Overview
+
+Learn more about accessibility at an [Introduction to Web Accessibility](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
+
+# Additional Resources
+
+Here are some optional resources for you to explore if you are interested in learning more about the topics from this week.
+W3.org WAI references:
+
+* [C32: Using media queries and grid CSS to reflow columns | WAI | W3C](https://www.w3.org/WAI/WCAG21/Techniques/css/C32.html)
+
+* [C31: Using CSS Flexbox to reflow content | WAI | W3C](https://www.w3.org/WAI/WCAG22/Techniques/css/C31)
+
+* [C39: Using the CSS reduce-motion query to prevent motion | WAI | W3C](https://www.w3.org/WAI/WCAG22/Techniques/css/C39)
+
+
