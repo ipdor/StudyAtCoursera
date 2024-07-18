@@ -76,7 +76,8 @@ Example:
 ## Flex
 
 > Reference  
-> https://www.w3schools.com/css/css3_flexbox.asp
+> https://www.w3schools.com/css/css3_flexbox.asp  
+> https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 ![](https://raw.githubusercontent.com/ipdor/Pictures/master/img/20240715213104.png)
 
