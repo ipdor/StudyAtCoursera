@@ -1,0 +1,24 @@
+div{
+    font-size:140%;
+}
+
+/*
+https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+*/
+
+/*Select all <div> elements with an class begin with "d-", case-insensitive*/
+div[class^="d-"]{
+    border: 1px solid black;
+    margin-top:3%;
+}
+
+/*Select all <div> elements with an class containing "d-lg-block", case-insensitive*/
+div[class*="d-lg-block"]{
+    color:red;
+}
+div[class*="d-md-block"]{
+    color:blue;
+}
+div[class*="d-sm-block"]{
+    color:green;
+}
